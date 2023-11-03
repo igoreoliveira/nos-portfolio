@@ -7,7 +7,7 @@ const projects = [
     "dates":{"start":"01/01/2011", "end": "01/01/2017"},
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo at lectus fermentum tincidunt.",
     "image": {"src": "/static/images/imagine-cup.jpg", "alt": "Alt text da imagem"},
-    "relatedLinks": [{"title": "Test", "url": "https://www.omelete.com.br"}],
+    "relatedLinks": [{"title": "Test", "url": "https://www.omelete.com.br"}, {"title": "Google", "url":"https://www.google.com"}],
     "colaborators": ['João Paulo Gois', 'Eliabe Castro'],
     "organization": null,
     "relatedFields": ["Design de jogos", "Design", "Computação Gráfica", "Inovação", "Programação"]
