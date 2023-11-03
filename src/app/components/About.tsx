@@ -24,9 +24,14 @@ export default function About() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          Desenvolvedor de produtos digitais com formação multidisciplinar.
+          Graduado em Ciência da Computação pela Universidade Federal do ABC
+          (UFABC, Santo André, SP - 2011 a 2017), com período sanduíche na
+          University of Houston (Houston, TX - 2014). Atualmente, trabalhando
+          como Tech Lead do time de conteúdo e soluções para web na Omelete
+          Company. Estudando gerenciamento de pessoas em times de
+          desenvolvimento de tecnologia e processos de inovação com ênfase em
+          impacto social.
         </Typography>
       </CardContent>
     </Card>
