@@ -11,48 +11,78 @@ import { styled } from '@stitches/react';
 
 
 
-export default function Project() {
+export default function Project({project}) {
   const [expanded, setExpanded] = React.useState(false);
-  const ChipWrapper = styled('div', {backgroundColor: 'red'})
+  const ChipWrapper = styled('div', {backgroundColor: 'red'});
+  const endDate = project.dates.end ? (project.dates.end) : "atualmente";
+  const dateString = project.dates.start + " - " +  endDate;
+ 
+  const relatedLinks = project.relatedLinks? [] :  null;
+  relatedLinks? project.relatedLinks.forEach((link) => {
+    if (link.url && link.title) {
+      relatedLinks.push (
+        <a href={link.url} target="blank"> {link.title} </a>
+      )
+    }
+  }): null ;
+
+  const relatedFields = project.relatedFields? [] :  null;
+  relatedFields? project.relatedFields.forEach((field) => {
+
+      relatedFields.push(<Chip label={field} variant="outlined" />);
+       
+  }): null ;
+
+  const colaborators = project.colaborators? " " + project.colaborators.join(', ') : null;
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        title="Título do meu projeto"
-        subheader="01/02/2023 - 10/10/2024"
+        title={project.title}
+        subheader={dateString}
       />
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/imagine-cup.jpg"
-        alt="Imagine Cup"
+        image={project.image.src}
+        alt={project.image.alt}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-         This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+         {project.description}
         </Typography>
 
-        <Typography variant="body2" color="text.secondary">
-         <strong>Links relacionados:</strong>
-        </Typography>
+        {relatedLinks? 
+          <Typography variant="body2" color="text.secondary">
+            <strong>Links relacionados:</strong>
+            {relatedLinks}
+          </Typography>
+          : null
+        }
 
-        <Typography variant="body2" color="text.secondary">
-         <strong>Colaboradores:</strong>
-        </Typography>
+        { colaborators? 
+          <Typography variant="body2" color="text.secondary">
+            <strong>Colaboradores:</strong>
+            {colaborators}
+          </Typography>
+          : null
+        }
 
-        <Typography variant="body2" color="text.secondary">
-         <strong>Entidades:</strong>
-        </Typography>
+        { project.organization ? 
+          (<Typography variant="body2" color="text.secondary">
+            <strong>Entidade: </strong> {project.organization}
+          </Typography>) 
+          : null
+        } 
 
         <Divider/>
-        <ChipWrapper>
-          <Chip label="Design de jogos" variant="outlined" />
-          <Chip label="Design" variant="outlined" />
-          <Chip label="Computação Gráfica" variant="outlined" />
-          <Chip label="Inovação" variant="outlined" />
-          <Chip label="Programação" variant="outlined" />
-        </ChipWrapper>
+
+        {relatedFields? 
+          <ChipWrapper>
+            {relatedFields}
+          </ChipWrapper>
+          : null
+        } 
 
       </CardContent>
 
