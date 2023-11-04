@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { styled } from "@stitches/react";
+import { Divider } from "@mui/material";
 
 const Intro = styled("div", { flex: "1" });
 const Info = styled("div", { flex: "1" });
@@ -22,7 +23,7 @@ const ContactContainer = styled(Card, {
 export default function Contact() {
   return (
     <ContactContainer id="contato" variant="outlined">
-      <CardHeader title="Contato"/>
+      <CardHeader title="Contato" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           E-mail: igoreoliveira@gmail.com

@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nós Portifólio - Igor Esteves",
-  description: "Um projeto pra unir os nós que atamos no mundo.",
+  title: "Igor Esteves de Oliveira",
+  description: "Portfólio de projetos desenvolvidos sempre entre nós.",
 };
 
 export default function RootLayout({
