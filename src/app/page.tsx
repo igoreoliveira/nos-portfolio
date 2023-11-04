@@ -5,6 +5,7 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { projects } from "./mock";
 import { useState } from "react";
 import { styled } from "@stitches/react";
@@ -60,6 +61,7 @@ export default function Home() {
         ))}
       </ProjectsWrapper>
       <Contact />
+      <Footer />
     </Container>
   );
 }
