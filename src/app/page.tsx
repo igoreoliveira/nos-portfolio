@@ -36,8 +36,8 @@ const ProjectsWrapper = styled("div", {
 });
 
 export default function Home() {
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
-  const updateSubjects = (updatedSubjects: []) => {
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const updateSubjects = (updatedSubjects: string[]) => {
     setSelectedSubjects(updatedSubjects);
   };
 

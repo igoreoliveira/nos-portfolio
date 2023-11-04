@@ -16,9 +16,15 @@ const FilterChip = styled(Chip, {
   borderColor: "#5d3b143d",
 });
 
-export default function Filter({ subjects, updateSubjects }) {
-  const handleClick = (event) => {
-    const selectedSubject = event.target.innerText;
+type props = {
+  subjects: string[];
+  updateSubjects: (arg: string[]) => void;
+};
+
+export default function Filter({ subjects, updateSubjects }: props) {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const element = event.target as HTMLElement;
+    const selectedSubject = element.innerText;
     if (selectedSubject === "Todos") {
       updateSubjects([]);
       return;

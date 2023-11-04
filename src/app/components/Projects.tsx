@@ -31,7 +31,28 @@ const ContentWrapper = styled(CardContent, {
   gap: "16px",
 });
 
-export default function Project({ project }) {
+type link = {
+  title: string;
+  url: string;
+};
+
+type props = {
+  project: {
+    title: string;
+    dates: { start: string; end: string | null };
+    description: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    relatedLinks: link[] | null;
+    colaborators: string[] | null;
+    organization: string | null;
+    relatedFields: string[];
+  };
+};
+
+export default function ProjectSection({ project }: props) {
   return (
     <CardProject id="projetos" variant="outlined">
       <CardHeader

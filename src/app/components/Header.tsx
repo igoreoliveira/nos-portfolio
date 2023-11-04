@@ -68,13 +68,16 @@ export default function Header() {
     setIsOpen((prevState) => !prevState);
   };
 
-  const handleClose = (event) => {
+  const handleClose = (
+    event: React.MouseEvent<HTMLLIElement> | React.MouseEvent<HTMLDivElement>
+  ) => {
     setIsOpen(false);
+    const target = event.target as HTMLElement;
     const element = document.getElementById(
-      `${event.target.innerText.toLowerCase()}`
+      `${target.innerText.toLowerCase()}`
     );
 
-    console.log(`${event.target.innerText.toLowerCase()}`);
+    console.log(`${target.innerText.toLowerCase()}`);
     element?.scrollIntoView({
       behavior: "smooth",
       block: "end",
@@ -87,7 +90,7 @@ export default function Header() {
       <Button onClick={handleClick}>
         <LunchDiningIcon sx={{ color: "#5d3b14" }} />
       </Button>
-      <Drawer active={isOpen} onClose={handleClose}>
+      <Drawer active={isOpen}>
         <Item onClick={handleClose}>Sobre</Item>
         <Item onClick={handleClose}>Projetos</Item>
         <Item onClick={handleClose}>Contato</Item>
