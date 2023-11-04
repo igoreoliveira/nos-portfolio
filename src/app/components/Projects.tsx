@@ -10,15 +10,19 @@ import { Chip, Divider } from "@mui/material";
 import { styled } from "@stitches/react";
 
 const ChipWrapper = styled("div", {
-  padding: "12px 0",
+  paddingTop: "24px",
+  gap: "8px",
   display: "flex",
+  justifyContent: "center",
+});
+
+const CardProject = styled(Card, {
+  borderColor: "#5d3b143d",
 });
 
 export default function Project({ project }) {
-  const [expanded, setExpanded] = React.useState(false);
-
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <CardProject variant="outlined">
       <CardHeader
         title={project.title}
         subheader={`${project.dates.start} - ${
@@ -71,6 +75,6 @@ export default function Project({ project }) {
           </ChipWrapper>
         )}
       </CardContent>
-    </Card>
+    </CardProject>
   );
 }

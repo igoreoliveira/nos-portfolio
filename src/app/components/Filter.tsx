@@ -1,6 +1,19 @@
 "use client";
 
 import { Chip } from "@mui/material";
+import { styled } from "@stitches/react";
+
+const FilterWrapper = styled("div", {
+  width: "100%",
+  display: "flex",
+  padding: "24px",
+  gap: "8px",
+});
+
+const FilterChip = styled(Chip, {
+  color: "#5d3b14",
+  borderColor: "#5d3b143d",
+});
 
 export default function Filter({ subjects, updateSubjects }) {
   const handleClick = (event) => {
@@ -17,36 +30,36 @@ export default function Filter({ subjects, updateSubjects }) {
   };
 
   return (
-    <>
-      <Chip
+    <FilterWrapper>
+      <FilterChip
         label={"Todos"}
-        variant={subjects.length < 1 ? "filled" : "outlined"}
+        variant={subjects.length > 0 ? "filled" : "outlined"}
         onClick={handleClick}
       />
-      <Chip
+      <FilterChip
         label={"Desenvolvimento de Jogos"}
         variant={
-          subjects.includes("Desenvolvimento de Jogos") ? "filled" : "outlined"
+          subjects.includes("Desenvolvimento de Jogos") ? "outlined" : "filled"
         }
         onClick={handleClick}
       />
-      <Chip
+      <FilterChip
         label={"Design de Jogos"}
-        variant={subjects.includes("Design de Jogos") ? "filled" : "outlined"}
+        variant={subjects.includes("Design de Jogos") ? "outlined" : "filled"}
         onClick={handleClick}
       />
-      <Chip
+      <FilterChip
         label={"Computação Gráfica"}
         variant={
-          subjects.includes("Computação Gráfica") ? "filled" : "outlined"
+          subjects.includes("Computação Gráfica") ? "outlined" : "filled"
         }
         onClick={handleClick}
       />
-      <Chip
+      <FilterChip
         label={"Inovação"}
-        variant={subjects.includes("Inovação") ? "filled" : "outlined"}
+        variant={subjects.includes("Inovação") ? "outlined" : "filled"}
         onClick={handleClick}
       />
-    </>
+    </FilterWrapper>
   );
 }
