@@ -44,8 +44,8 @@ export default function About() {
             Desenvolvedor de produtos digitais com formação multidisciplinar.
             Graduado em Ciência da Computação pela Universidade Federal do ABC
             (UFABC, Santo André, SP - 2011 a 2017), com período sanduíche na
-            University of Houston (Houston, TX - 2014). Atualmente, trabalhando
-            como Tech Lead do time de conteúdo e soluções para web na Omelete
+            University of Houston (Houston, TX - 2014), financiado pelo programa Ciência sem Fronteiras. 
+            Atualmente, trabalhando como Tech Leader do time de conteúdo e soluções para web na Omelete
             Company. Estudando gerenciamento de pessoas em times de
             desenvolvimento de tecnologia e processos de inovação com ênfase em
             impacto social.
