@@ -22,16 +22,13 @@ const ContactContainer = styled(Card, {
 export default function Contact() {
   return (
     <ContactContainer id="contato" variant="outlined">
-      <CardHeader title="Contato" subheader="Feito com <3 em SP" />
+      <CardHeader title="Contato"/>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          email e tals
+          E-mail: igoreoliveira@gmail.com
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          email e tals
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          email e tals
+          Linkedin: <a href="https://www.linkedin.com/in/igoreoliveira/" target="blank"> igoreoliveira </a>
         </Typography>
       </CardContent>
     </ContactContainer>

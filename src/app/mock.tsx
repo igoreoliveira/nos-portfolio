@@ -3,7 +3,7 @@ export const projects = [
     title: "Presidência Abeuni",
     dates: { start: "março de 2022", end: "março de 2023"},
     description:
-     "A retomada das atividades presenciais da Abeuni se deu com mais força durante a gestão de 2022, da qual fui presidente. Todo o processo se baseou tendo como prioridade o bem-estar dos voluntários da entidade e da população atendida. Os eventos retornaram, adaptando seus propósitos e formatos à nova realidade nacional. Além da retomada dos eventos, essa gestão teve como motivação desenvolver um trabalho estratégico focado em impacto social, buscando uma direção clara de atuação.",
+     "A retomada das atividades presenciais da Abeuni se deu com mais força durante a gestão da diretoria de 2022, da qual fui presidente. Todo o processo se baseou tendo como prioridade o bem-estar dos voluntários da entidade e da população atendida. Os eventos retornaram, adaptando seus propósitos e formatos à nova realidade nacional. Além da retomada dos eventos, essa gestão teve como motivação desenvolver um trabalho estratégico focado em impacto social, buscando uma direção clara de atuação, em uma comunicação constante com os agentes das comunidades em que atuamos e dos sistemas SUS e SUAS, indispensáveis de serem considerados quando se quer fazer um trabalho de impacto em saúde pública e educação.",
     image: {
       src: "/static/images/presida.jpeg",
       alt: "Grupo de voluntários de diversas idades dispostos em filas posando para foto",
@@ -30,7 +30,7 @@ export const projects = [
     title: "Tech Leader Omelete",
     dates: { start: "novembro de 2020", end: null},
     description:
-     "Em um novo contexto de gestão do dia a dia das pessoas desenvolvedoras do Omelete, com cada uma delas morando em lugares diferentes do Brasil, assumi o cargo de tech leader do time de soluções para web do Omelete. Além de contar com o conhecimento amplo sobre a arquitetura dos sistemas, existe na posição o desafio de evoluir a tecnologias dos produtos digitais para que eles continuem chegando a milhões de pessoas, de forma mais inteligente, a partir da utilização ética e estratégica de dados, das práticas mais modernas de desenvolvimento de software, com a gestão inteligente de pessoas desenvolvedoras e o olhar atento para novas tecnologias.",
+     "Em um novo contexto de gestão do dia a dia das pessoas desenvolvedoras, com cada uma delas morando em lugares diferentes do Brasil, assumi o cargo de tech leader do time de soluções para web do Omelete. Além de exigir conhecimento amplo sobre a arquitetura dos sistemas, existe na posição o desafio de evoluir a tecnologias dos produtos digitais para que eles continuem chegando a milhões de pessoas, de forma mais inteligente, a partir da utilização ética e estratégica de dados, das práticas mais modernas de desenvolvimento de software, com a gestão ativa de pessoas desenvolvedoras e o olhar atento para novas tecnologias. Queremos ser pioneiros nas inovações de como os conteúdos digitais são recebidos pelas pessoas, considerando formatos intermídia que vão além de somente texto.",
     image: {
       src: "/static/images/logoomelete.png",
       alt: "Omelete escrito em amarelo",
@@ -113,7 +113,7 @@ export const projects = [
     title: "GT Dados da Abeuni",
     dates: { start: "julho de 2019", end: "fevereiro de 2020"},
     description:
-     "Como diretor assistencial da Abeuni, fui responsável por organizar um grupo de trabalho (GT) para organizar e captar os dados sobre os atendimentos realizados nas ações da entidade. Esses dados eram importantes para que alcançássemos nosso objetivo de conhecer melhor a população com quem trabalhávamos, de forma sistemática, para que pudéssemos ampliar nossos atendimentos para que fossem mais efetivos. O desafio estava em como pensar em uma infraestrutura acessível, considerando as limitações financeiras da entidade, e que se adequasse às escolas em que os atendimentos eram realizados, onde não possuíamos, na maioria das vezes, internet. O projeto realizado pelo grupo foi parte de um início de um novo momento para a ONG, em que as ações eram planejadas a partir de métodos mais estratégicos.",
+     "Como diretor assistencial da Abeuni, fui responsável por organizar um grupo de trabalho (GT) para organizar e captar os dados sobre os atendimentos realizados nas ações da entidade. Esses dados eram importantes para que alcançássemos nosso objetivo de conhecer melhor a população com quem trabalhávamos, de forma sistemática, para que pudéssemos ampliar nossos atendimentos para que fossem mais efetivos. O desafio estava em como pensar em uma infraestrutura acessível, considerando as limitações financeiras da entidade, e que se adequasse às escolas em que os atendimentos eram realizados, onde não possuíamos, na maioria das vezes, internet.",
     image: {
       src: "/static/images/abeuni2.png",
       alt: "Grupo de voluntários reunidos de braços dados em círculos, com endereço para o site da abeuni nas costas da camiseta",
@@ -268,7 +268,7 @@ export const projects = [
     title: "Estágio de programação para a web no Omelete",
     dates: { start: "outubro de 2015", end: "janeiro de 2017" },
     description:
-      "O estágio era voltado para a construção do portal Omelete, conhecido, desde 2000, por ser um grande vetor da cultura pop na internet brasileira. As atividades envolviam todas as esferas da computação para a web: éramos um time pequeno de 3 desenvolvedores, 1 designer e1 gerente e cuidávamos da infraestrutura, com servidores hospedados no UOL, assim como desenvolvemos features de front-end e back-end para o site. Dessa forma, foi utilizado uma vasta lista de tecnologias, como o framework Python para páginas da web Django, os servidores Nginx, banco de dados PostgreSQL, entre outras. Durante o período, foram desenvolvidos projetos especiais, que funcionavam como pequenas aplicações interativas dentro do grande ambiente do portal, servindo como espaço para experimentações de tecnologias.",
+      "O estágio era voltado para a construção do portal Omelete, conhecido, desde 2000, por ser um grande vetor da cultura pop na internet brasileira. As atividades envolviam todas as esferas da computação para a web: éramos um time pequeno de 3 desenvolvedores, 1 designer e 1 gerente e cuidávamos da infraestrutura, com servidores hospedados no UOL, assim como desenvolvíamos features de front-end e back-end para o site. Dessa forma, foi utilizado uma vasta lista de tecnologias, como o framework Python para páginas da web Django, os servidores Nginx, banco de dados PostgreSQL, entre outras. Durante o período, foram desenvolvidos projetos especiais, que funcionavam como pequenas aplicações interativas dentro do grande ambiente do portal, servindo como espaço para experimentações de tecnologias.",
     image: {
       src: "/static/images/omelete.png",
       alt: "Topo do site Omelete, com o logo sobre header preto, notícias compostas por uma imagem, uma tag com sua categoria, título, dispostas em quadrados pela tela.",
@@ -304,11 +304,11 @@ export const projects = [
     },
     relatedLinks: [
       {
-        title: "Vídeo sobre o projeto",
+        title: "Vídeo sobre o projeto ",
         url: "https://www.youtube.com/watch?v=rebgAmJbL68",
       },
       {
-        title: "Artigo SBGames 2016",
+        title: " | Artigo SBGames 2016",
         url: "https://www.sbgames.org/sbgames2016/downloads/anais/157397.pdf",
       },
     ],
@@ -330,7 +330,7 @@ export const projects = [
     title: "Zoogi Roll - Finalista da US Imagine Cup 2014",
     dates: { start: "setembro de 2014", end: "maio de 2015" },
     description:
-      "O desenvolvimento do jogo mobile Zoogi Roll foi fruto do trabalho desenvolvido na disciplina de Desing de Jogos no segundo semestre do período período sanduíche na University of Houston. A ideia de Zoogi Roll era criar um jogo multi-plataforma e acessível, voltado à diversão, com monstrinhos que batalhavam em uma arena de “bolinhas-de-gude”. O projeto foi desenvolvido em grupo, com mais 3 integrantes, e foi finalista da edição de 2014 da Imagine Cup, competição de inovação da Microsoft, na categoria de Desenvolvimento de Jogos. Além do trabalho de programação, era necessário pensar em aspectos do design do projeto e no pitch para falar sobre o produto. O jogo não venceu a competição, mas foi bem recebido e ficou entre os apenas 4 finalistas.",
+      "O desenvolvimento do jogo mobile Zoogi Roll foi fruto do trabalho desenvolvido na disciplina de Design de Jogos no segundo semestre do período período sanduíche na University of Houston. A ideia de Zoogi Roll era criar um jogo multi-plataforma e acessível, voltado à diversão, com monstrinhos que batalhavam em uma arena de “bolinhas-de-gude”. O projeto foi desenvolvido em grupo, com mais 3 integrantes, e foi finalista da edição de 2014 da Imagine Cup, competição de inovação da Microsoft, na categoria de Desenvolvimento de Jogos. Além do trabalho de programação, era necessário pensar em aspectos do design do projeto e no pitch para falar sobre o produto. O jogo não venceu a competição, mas foi bem recebido e ficou entre os apenas 4 finalistas.",
     image: {
       src: "/static/images/zoogii.png",
       alt: "Cenário do jogo Zoogi Roll, com um tubarão em formato de bolinha indo em direção a um lobo em formato de bolinha.",
