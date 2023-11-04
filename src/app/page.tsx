@@ -23,6 +23,7 @@ const Container = styled("div", {
 });
 
 const Spacer = styled("div", {
+  marginTop: "24px",
   width: "90%",
   height: "1px",
   background: "#5d3b143d",
