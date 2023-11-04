@@ -31,7 +31,7 @@ const ContentWrapper = styled(CardContent, {
 
 export default function Project({ project }) {
   return (
-    <CardProject variant="outlined">
+    <CardProject id="projetos" variant="outlined">
       <CardHeader
         style={{ color: primaryColor, background: "#fff9f2ab" }}
         title={project.title}

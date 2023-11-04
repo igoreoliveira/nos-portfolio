@@ -4,10 +4,10 @@ import ProjectSection from "./components/Projects";
 import About from "./components/About";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
+import Contact from "./components/Contact";
 import { projects } from "./mock";
 import { useState } from "react";
 import { styled } from "@stitches/react";
-import { Divider } from "@mui/material";
 
 const Container = styled("div", {
   padding: "24px",
@@ -58,6 +58,7 @@ export default function Home() {
           <ProjectSection project={project} />
         ))}
       </ProjectsWrapper>
+      <Contact />
     </Container>
   );
 }

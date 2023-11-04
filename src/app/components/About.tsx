@@ -27,7 +27,7 @@ const CardMainHeader = styled(CardHeader, {
 
 export default function About() {
   return (
-    <CardContainer variant="outlined">
+    <CardContainer id="sobre" variant="outlined">
       <Intro>
         <CardMedia
           component="img"
@@ -35,7 +35,6 @@ export default function About() {
           image="/static/images/igao.jpeg"
           alt="Imagine Cup"
         />
-        <CardSubHeader subheader="Gostoso desde 93" />
       </Intro>
       <Info>
         <CardMainHeader title="Igor Esteves de Oliveira" />

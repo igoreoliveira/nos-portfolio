@@ -16,40 +16,82 @@ const FixedHeader = styled("div", {
   justifyContent: "end",
 });
 
+const Drawer = styled("div", {
+  position: "fixed",
+  top: "0",
+  right: "-250px",
+  width: "250px",
+  height: "100vh",
+  background: "#fff9f2",
+  borderLeft: "1px solid #5d3b143d",
+  zIndex: "2",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  transition: "right ease .3s",
+
+  variants: {
+    active: {
+      true: {
+        right: "0",
+      },
+    },
+  },
+});
+
+const Item = styled(MenuItem, {
+  width: "100%",
+  justifyContent: "center",
+});
+
+const Overlay = styled("div", {
+  display: "none",
+  width: "100vw",
+  height: "100vh",
+  position: "fixed",
+  background: "rgba(0,0,0,0.5)",
+  zIndex: "1",
+
+  variants: {
+    active: {
+      true: {
+        display: "block",
+      },
+    },
+  },
+});
+
 export default function Header() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+    setIsOpen((prevState) => !prevState);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
+
+  const handleClose = (event) => {
+    setIsOpen(false);
+    const element = document.getElementById(
+      `${event.target.innerText.toLowerCase()}`
+    );
+
+    console.log(`${event.target.innerText.toLowerCase()}`);
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
   };
 
   return (
     <FixedHeader>
-      <Button
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      >
+      <Overlay onClick={handleClose} active={isOpen} />
+      <Button onClick={handleClick}>
         <LunchDiningIcon sx={{ color: "#5d3b14" }} />
       </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        <MenuItem onClick={handleClose}>Sobre</MenuItem>
-        <MenuItem onClick={handleClose}>Projetos</MenuItem>
-        <MenuItem onClick={handleClose}>Contato</MenuItem>
-      </Menu>
+      <Drawer active={isOpen} onClose={handleClose}>
+        <Item onClick={handleClose}>Sobre</Item>
+        <Item onClick={handleClose}>Projetos</Item>
+        <Item onClick={handleClose}>Contato</Item>
+      </Drawer>
     </FixedHeader>
   );
 }

@@ -33,31 +33,31 @@ export default function Filter({ subjects, updateSubjects }) {
     <FilterWrapper>
       <FilterChip
         label={"Todos"}
-        variant={subjects.length > 0 ? "filled" : "outlined"}
+        variant={subjects.length > 0 ? "outlined" : "filled"}
         onClick={handleClick}
       />
       <FilterChip
         label={"Desenvolvimento de Jogos"}
         variant={
-          subjects.includes("Desenvolvimento de Jogos") ? "outlined" : "filled"
+          subjects.includes("Desenvolvimento de Jogos") ? "filled" : "outlined"
         }
         onClick={handleClick}
       />
       <FilterChip
         label={"Design de Jogos"}
-        variant={subjects.includes("Design de Jogos") ? "outlined" : "filled"}
+        variant={subjects.includes("Design de Jogos") ? "filled" : "outlined"}
         onClick={handleClick}
       />
       <FilterChip
         label={"Computação Gráfica"}
         variant={
-          subjects.includes("Computação Gráfica") ? "outlined" : "filled"
+          subjects.includes("Computação Gráfica") ? "filled" : "outlined"
         }
         onClick={handleClick}
       />
       <FilterChip
         label={"Inovação"}
-        variant={subjects.includes("Inovação") ? "outlined" : "filled"}
+        variant={subjects.includes("Inovação") ? "filled" : "outlined"}
         onClick={handleClick}
       />
     </FilterWrapper>
