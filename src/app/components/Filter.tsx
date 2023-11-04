@@ -6,6 +6,7 @@ import { styled } from "@stitches/react";
 const FilterWrapper = styled("div", {
   width: "100%",
   display: "flex",
+  flexWrap: "wrap",
   padding: "24px",
   gap: "8px",
 });
@@ -33,7 +34,7 @@ export default function Filter({ subjects, updateSubjects }) {
     <FilterWrapper>
       <FilterChip
         label={"Todos"}
-        variant={subjects.length > 0 ? "filled" : "outlined"}
+        variant={!subjects.length ? "filled" : "outlined"}
         onClick={handleClick}
       />
       <FilterChip
