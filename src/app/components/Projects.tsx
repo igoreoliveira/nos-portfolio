@@ -15,10 +15,12 @@ const ChipWrapper = styled("div", {
   gap: "8px",
   display: "flex",
   justifyContent: "center",
+  flexWrap: "wrap",
 });
 
 const CardProject = styled(Card, {
   borderColor: "#5d3b143d",
+  maxWidth: "100%",
 });
 
 const ContentWrapper = styled(CardContent, {

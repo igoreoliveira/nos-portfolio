@@ -6,9 +6,21 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { styled } from "@stitches/react";
+import { styled } from "../../../stitches.config";
 
-const Intro = styled("div", { flex: "1" });
+const Intro = styled("div", {
+  flex: "1",
+  variants: {
+    direction: {
+      vertical: {
+        maxHeight: "unset",
+      },
+      horizontal: {
+        maxHeight: "300px",
+      },
+    },
+  },
+});
 const Info = styled("div", { flex: "1" });
 const CardContainer = styled(Card, {
   display: "flex",
@@ -16,28 +28,65 @@ const CardContainer = styled(Card, {
   color: "#5d3b14",
   border: "none",
   borderRadius: "0",
+
+  variants: {
+    direction: {
+      vertical: {
+        flexDirection: "column",
+      },
+      horizontal: {
+        flexDirection: "row",
+      },
+    },
+  },
 });
-const CardSubHeader = styled(CardHeader, {
-  paddingLeft: "0",
-});
+
 const CardMainHeader = styled(CardHeader, {
   paddingBottom: "0",
-  paddingTop: "0",
+
+  variants: {
+    direction: {
+      vertical: {
+        paddingTop: "24px",
+      },
+      horizontal: {
+        paddingTop: "0",
+      },
+    },
+  },
 });
 
 export default function About() {
   return (
-    <CardContainer id="sobre" variant="outlined">
-      <Intro>
+    <CardContainer
+      id="sobre"
+      direction={{
+        "@initial": "horizontal",
+        "@bp1": "vertical",
+      }}
+      variant="outlined"
+    >
+      <Intro
+        direction={{
+          "@initial": "horizontal",
+          "@bp1": "vertical",
+        }}
+      >
         <CardMedia
           component="img"
           height="194"
           image="/static/images/igao2.jpg"
-          alt="Imagine Cup"
+          alt="Igor Esteves"
         />
       </Intro>
       <Info>
-        <CardMainHeader title="Igor Esteves de Oliveira" />
+        <CardMainHeader
+          direction={{
+            "@initial": "horizontal",
+            "@bp1": "vertical",
+          }}
+          title="Igor Esteves de Oliveira"
+        />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             Desenvolvedor de produtos digitais com formação multidisciplinar.
