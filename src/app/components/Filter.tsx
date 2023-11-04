@@ -33,7 +33,51 @@ export default function Filter({ subjects, updateSubjects }) {
     <FilterWrapper>
       <FilterChip
         label={"Todos"}
-        variant={subjects.length > 0 ? "outlined" : "filled"}
+        variant={subjects.length > 0 ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Inovação"}
+        variant={subjects.includes("Inovação") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Impacto Social"}
+        variant={subjects.includes("Impacto Social") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Gestão de Pessoas"}
+        variant={subjects.includes("Gestão de Pessoas") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Desenvolvimento de Software"}
+        variant={
+          subjects.includes("Desenvolvimento de Software")
+            ? "filled"
+            : "outlined"
+        }
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Web"}
+        variant={subjects.includes("Web") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Saúde"}
+        variant={subjects.includes("Saúde") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Educação"}
+        variant={subjects.includes("Educação") ? "filled" : "outlined"}
+        onClick={handleClick}
+      />
+      <FilterChip
+        label={"Arte e Cultura"}
+        variant={subjects.includes("Arte e Cultura") ? "filled" : "outlined"}
         onClick={handleClick}
       />
       <FilterChip
@@ -53,11 +97,6 @@ export default function Filter({ subjects, updateSubjects }) {
         variant={
           subjects.includes("Computação Gráfica") ? "filled" : "outlined"
         }
-        onClick={handleClick}
-      />
-      <FilterChip
-        label={"Inovação"}
-        variant={subjects.includes("Inovação") ? "filled" : "outlined"}
         onClick={handleClick}
       />
     </FilterWrapper>
