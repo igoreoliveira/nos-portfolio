@@ -9,8 +9,9 @@ import Typography from "@mui/material/Typography";
 import { Chip, Divider } from "@mui/material";
 import { styled } from "@stitches/react";
 
+const primaryColor = "#5d3b14";
+
 const ChipWrapper = styled("div", {
-  paddingTop: "24px",
   gap: "8px",
   display: "flex",
   justifyContent: "center",
@@ -20,10 +21,19 @@ const CardProject = styled(Card, {
   borderColor: "#5d3b143d",
 });
 
+const ContentWrapper = styled(CardContent, {
+  color: primaryColor,
+  background: "#fff9f2ab",
+  display: "flex",
+  flexDirection: "column",
+  gap: "16px",
+});
+
 export default function Project({ project }) {
   return (
     <CardProject variant="outlined">
       <CardHeader
+        style={{ color: primaryColor, background: "#fff9f2ab" }}
         title={project.title}
         subheader={`${project.dates.start} - ${
           project.dates.end || "atualmente"
@@ -35,7 +45,7 @@ export default function Project({ project }) {
         image={project.image.src}
         alt={project.image.alt}
       />
-      <CardContent>
+      <ContentWrapper>
         <Typography variant="body2" color="text.secondary">
           {project.description}
         </Typography>
@@ -65,16 +75,17 @@ export default function Project({ project }) {
           </Typography>
         )}
 
-        <Divider />
-
         {project.relatedFields && (
-          <ChipWrapper>
-            {project.relatedFields?.map((field) => (
-              <Chip label={field} variant="outlined" />
-            ))}
-          </ChipWrapper>
+          <>
+            <Divider />
+            <ChipWrapper>
+              {project.relatedFields?.map((field) => (
+                <Chip label={field} variant="outlined" />
+              ))}
+            </ChipWrapper>
+          </>
         )}
-      </CardContent>
+      </ContentWrapper>
     </CardProject>
   );
 }

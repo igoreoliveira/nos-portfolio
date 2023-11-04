@@ -11,6 +11,7 @@ import { Divider } from "@mui/material";
 
 const Container = styled("div", {
   padding: "24px",
+  paddingTop: "0",
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
